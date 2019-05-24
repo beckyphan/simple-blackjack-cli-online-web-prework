@@ -37,8 +37,8 @@ def hit?(card_total)
     return card_total
   elsif input == "h"
     new = deal_card
-    card_total += new
-    return card_total
+    @card_total = card_total + new
+    return @card_total
   else 
     invalid_command
     hit?(card_total)
