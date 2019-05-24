@@ -34,14 +34,14 @@ def hit?(card_total)
   prompt_user
   input = get_user_input
   if input == "s"
-    return @card_total
+    return card_total
   elsif input == "h"
     new = deal_card
-    @card_total += new
-    return @card_total
+    card_total += new
+    return card_total
   else 
     invalid_command
-    hit?(@card_total)
+    hit?(card_total)
   end
 end
 
