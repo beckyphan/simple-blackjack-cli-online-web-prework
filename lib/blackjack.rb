@@ -30,17 +30,17 @@ def initial_round
   return @card_total
 end
 
-def hit?(card_total)
+def hit?(@card_total)
   prompt_user
   input = get_user_input
   if input == "s"
-    return card_total
+    return @card_total
   elsif input == "h"
     new = deal_card
-    card_total += new
+    @card_total += new
   else 
     invalid_command
-    hit?(card_total)
+    hit?(@card_total)
   end
 end
 
