@@ -26,8 +26,8 @@ def initial_round
   deal_card
   deal_card
   @card_total = deal_card + deal_card
-  display_card_total(card_total)
-  return card_total
+  display_card_total(@card_total)
+  return @card_total
 end
 
 def hit?(card_total)
